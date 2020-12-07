@@ -126,6 +126,20 @@ p{
 	font-size: 2rem;
 }
 
+.container2{
+	margin: 0.5% 0.5% 0.5% 0.5% ;
+	border-radius: 1%;
+	padding: 1% 1% 1% 1%;
+}
+
+.container2 table{
+	width: 50%;
+}
+
+.container2 table tr td{
+	font-size: 2rem;
+}
+
 #proposals_submitted_dropdown, #proposals_under_works_dropdown, #problems_of_interest_dropdown{
 	height: 40px;
 	font-size: 1.5rem;

@@ -52,8 +52,8 @@
       firebase.analytics();
     </script>
 
-  <!--nav-->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="home.html">#Make a Difference</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -61,8 +61,11 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Dashboard</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="searchpage.html">RFP Search</a>
@@ -89,7 +92,7 @@
         var storageRef = firebase.storage().ref('Rfps/'+ file.name);
 
         // Create a reference to 'mountains.jpg'
-        var docRef = storageRef.child('mountains.jpg');
+        //var docRef = storageRef.child('mountains.jpg');
 
         // While the file names are the same, the references point to different files
         //mountainsRef.name === mountainImagesRef.name            // true
@@ -105,6 +108,28 @@
         window.location.replace("login.html");
       }
       document.getElementById('districtName').value;
+      uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+  function(snapshot) {
+    // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+    function(error) {
+
+    // A full list of error codes is available at
+    // https://firebase.google.com/docs/storage/web/handle-errors
+    switch (error.code) {
+      case 'storage/unauthorized':
+        // User doesn't have permission to access the object
+        break;
+
+      case 'storage/canceled':
+        // User canceled the upload
+        break;
+
+      ...
+
+      case 'storage/unknown':
+        // Unknown error occurred, inspect error.serverResponse
+        break;
+    },
     </script>
 
   <div class="container1" id="proposal_upload">
