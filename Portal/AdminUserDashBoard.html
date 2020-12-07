@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+  <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=_jFFWodXWd0hFZwLv1BWcZMdYB1wWQVDO4kOzp8uc6t-Ta3JLaYDc8lbKO7sfTHoh0WwA9NtTcBqWCKMWp6-sihQFE5FVs3HHHh_jkdzGe1qHlpCbhUDGQSBgHidQY_v474s_70zkUtLakJUxb-UtZJUTNycArgYlw3Adm3onyHYbQYmGFgvO5Lhdgw8KCVQaBwJR1ChcAEWT3oSBRcuyOD2zXDvgmg72wqu-nc6aEOv6AVperaFhvnkpXdii9tHU2_HOUAdZvfk7TKtSWvofw8OyMQMWgO9I_gBPqDzOlE4NH-g3A0B7pqWOiw3hXy-e3ResKz7B7k-94X93pG6z3BkppZMIOznijcMtuQ5rQpAJpBZcokCwCcWQ9CfYYXaoFnPx4zUqB1aQiNG_DXcVjpSgggQJk0EEiMuwkYk9iXFtfJ2mURQY6v4H5yYggbMpKajkndyeCLhEaSCDQSZGrYmUEb3k3ZpXR4OlL448TPAh4mvGICzMmap2nbwgaihRt2SMRANtljak-Ot6PtA_Whbe9M6g1w89liznZb2g3FrbSriMr1WfAUrSHIFWxOFUAE1SBHe6rjLQgtuxXy7HUsAkH4JV0XVaG_FNbbvNWCMnErpidm7R1qkH3fTmvfgIo7_rvsx5Lq7_D2O3dTx-9Ty9m3I1pLp0Ek7VEO3al83-gnzal4ab-NGxXaFPLcvwV4CDpFDEj7CHltgy11Vn6jOMJdXmEPl2IzKogYZiJbE24QwoO40heudYbHaBwoWu37u8NyKUq1CU20lldGmUQtH8EPcAtRv-qgw4nX-FDDSsfGWHM0a73Wp3saU7BbWZbRPI2UEdaHcuNNSxzUH6BS3wUdirCKw1gjemegNKhjaHR3uwp0n5RVkI4FgI9Lfe4KlFv5c4pGsPil-BrVFSpNAVzZQrCnYkw-gyIhDMIyef7mjJ5F6ZvBb8pQ7MfjRq21e4iXAfAAkykqzx1hof0fAqcUELg77VmgDwhVib1XXpEsJ3DmjM5kGl3y__NziEKGDrFbpcBuLlUcE9udL07_a5h39Rj3efXcsndSwTrhGyTJHLCSpg3agQOZR4S3jl5kpEPLYX4g-cypqD47hXkdhafN2G_naHRiPPZRVJkY8NOGQR8fVK3NM1FGqmvGvRq7YKnkRCXeYMG4VFItNn53q7YRx3DaAVdNtPFionbo8Rd7wPgehms7gNIzv2LE8V9WolKCQjxz1UchhHbQorA" nonce="d2421efbab53b727ba2a96d32c4ad1f7" charset="UTF-8"></script></head>
+  <body>
+
+    <!--firebase use-->
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyCBogDDnDNRwhH3AkuINRYLH7hZ0m8VcHg",
+        authDomain: "rfpportal-c447e.firebaseapp.com",
+        projectId: "rfpportal-c447e",
+        databaseURL: "https://rfpportal-c447e-default-rtdb.firebaseio.com",
+        storageBucket: "rfpportal-c447e.appspot.com",
+        messagingSenderId: "281146939127",
+        appId: "1:281146939127:web:4d6139dcdce23dc60c25f2",
+        measurementId: "G-44RQ4SDSWF"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <!--for bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="home.html">#Make a Difference</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="searchpage.html">RFP Search</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <script type="text/javascript">
+    var database = firebase.database();
+    var dbref = database.ref().child('object');
+
+    var user = localStorage.getItem('data');
+    user = JSON.parse(user);
+    //console.log('data', JSON.parse(user));
+    //console.log("jnvln", user.displayName);
+    var name, email, profession, age;
+    let uId = user.uid;
+    document.addEventListener("DOMContentLoaded", getUserData);
+
+    function getUserData() {
+      //var data = firebase.database().ref('/Users/' + userId).once('value');
+      if (user.displayName) {
+        database.ref('users/' + uId).on('value', function(snapshot){
+          document.getElementById('nameofuser').innerHTML = JSON.stringify(user.displayName);
+          document.getElementById('emailofuser').innerHTML =  JSON.stringify(user.email) ;
+          document.getElementById('professionofuser').innerHTML =  JSON.stringify(snapshot.val().profession) ;
+          document.getElementById('ageofuser').innerHTML =  JSON.stringify(snapshot.val().age) ;
+          // The user's ID, unique to the Firebase project. Do NOT use
+          // this value to authenticate with your backend server, if
+          // you have one. Use User.getToken() instead.
+        });
+      }
+    }
+    </script>
+
+	<div class = "userDetails">
+		<h1>Admin User Dash Board</h1>
+		<div class = "details">
+			<table style = " width: 30%">
+				  <tr>
+					<td>Name:</td>
+					<td id="nameofuser">Name1</td>
+				  </tr>
+				  <tr>
+					<td>Email:</td>
+					<td id="emailofuser">Email1</td>
+				  </tr>
+				  <tr>
+					<td>Professional Designation:</td>
+					<td id="professionofuser">Designation1</td>
+				  </tr>
+				  <tr>
+					<td>Age:</td>
+					<td id="ageofuser">Age1</td>
+				  </tr>
+			</table>
+		</div>
+	</div>
+
+  <button type="button" id="searchbtn" onclick="window.location.replace('RFPPage.html');">Upload New RFP</button>
+  <button type="button" id="searchbtn" onclick="window.location.replace('user_data_modification.html');" >Edit Profile</button>
+
+	<div class="searchTable">
+	  <div class="columnsA">
+		<div class = "OuterBox">
+			<div class = "header">Active Request For Proposal (RFP)</div>
+			<div>Proposal 1</div>
+			<div>Proposal 2</div>
+		</div>
+	  </div>
+
+	  <div class="columnsA">
+		<div class = "OuterBox">
+			<div class = "header">Completed Request For Proposal (RFP)</div>
+			<div>Proposal 1</div>
+			<div>Proposal 2</div>
+		</div>
+	  </div>
+	</div>
+
+  </body>
+</html>

@@ -1,0 +1,197 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+}
+h2{
+	font-size: 3rem;
+	text-align: center;
+}
+
+h2{
+	font-size: 3rem;
+	text-align: center;
+}
+p{
+	text-align: center;
+	font-size:3rem;
+}
+
+.navbar{
+	
+	background-color: #007bff;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-link{
+	font-size: 2rem;
+	color: white;
+}
+
+.navbar-brand{
+	font-size: 2rem;
+}
+
+.userDetails{
+	padding: 1%;
+	border-radius: 1%;
+}
+#input{
+	margin-left: 2%;
+	height: 40px;
+	outline: none;
+	width: 400px;
+	margin-bottom: 3%;
+}
+
+#input[type="text"]{
+	font-size: 1.5rem;
+}
+
+.details table td{
+	font-size: 1.5rem;
+}
+
+#searchbtn{
+	height: 40px;
+	background: #007bff;
+	border: none;
+	color: white;
+	font-size: 1.5rem;
+	margin-left: 36%;
+	margin-bottom: 3%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#uploadFileBtn{
+	height: 30px;
+	background: #007bff;
+	border: none;
+	color: white;
+	font-size: 1rem;
+	margin: 3% 0.5% 3% 1%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+#uploadFileBtn:hover{
+	cursor: pointer;
+}
+
+#searchbtn:hover{
+	cursor: pointer;
+}
+
+.columns{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	width: 32%;
+	float: left;
+	position: relative;
+	margin: 0.5% 0.5% 0.5% 0.5% ;
+	border-collapse: collapse;
+	font-family: "Arial",sans-serif;
+	border-radius: 1%;
+}
+
+.columnsA{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	width: 49%;
+	float: left;
+	position: relative;
+	margin: 0.5% 0.5% 0.5% 0.5% ;
+	border-collapse: collapse;
+	font-family: "Arial",sans-serif;
+	border-radius: 1%;
+}
+
+.header{
+	background-color: #007bff;
+	font-size: 2rem;
+}
+
+.container1{
+	margin: 0.5% 0.5% 0.5% 0.5% ;
+	border-radius: 1%;
+	padding: 1% 1% 1% 1%;
+}
+
+.container1 table{
+	width: 75%;
+}
+
+.container1 table tr td{
+	font-size: 2rem;
+}
+
+#proposals_submitted_dropdown, #proposals_under_works_dropdown, #problems_of_interest_dropdown{
+	height: 40px;
+	font-size: 1.5rem;
+	margin-left: 2%;
+	margin-bottom: 3%;
+}
+
+#proposals_submitted_dropdown option{
+	font-size: 1.5rem;
+}
+
+#proposals_under_works_dropdown option{
+	font-size: 1.5rem;
+}
+
+#problems_of_interest_dropdown option{
+	font-size: 1.5rem;
+}
+
+#proposals_submitted_dropdown > option.active{
+	display: block;
+}
+
+#proposals_under_works_dropdown > option.active{
+	display: block;
+}
+
+#problems_of_interest_dropdown > option.active{
+	display: block;
+}
+
+#searchTable{
+  font-family: "Arial",sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+#searchTable td, #searchTable th {
+  border: 1px solid #ccc;
+  padding: 4px;
+  font-size: 2rem;
+}
+
+/*#searchTable tr:nth-child(even){background-color: #f2f2f2;}*/
+
+#searchTable tr:hover {
+	background-color: #ddd;
+}
+
+#searchTable th {
+  font-size: 2rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #007bff;
+  color: black;
+}
+
+.OuterBox {
+	box-sizing: border-box;
+	text-align: left;
+	padding: 4px;
+	box-shadow: 2px 2px 2px 2px;
+}
+
+.OuterBox > div{
+	font-size: 2rem;
+}

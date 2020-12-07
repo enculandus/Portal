@@ -1,0 +1,35 @@
+body{
+
+}
+
+.container1{
+  margin:1% 1% 1% 1%;
+  display: block;
+}
+
+.container2{
+  margin:1% 1% 1% 1%;
+  display: block;
+  float: left;
+}
+
+.container3{
+  width: 100%;
+}
+
+.option{
+  float: left;
+  display: block;
+  text-align: center;
+  width: 50%;
+  cursor: pointer;
+}
+
+#for_carousel{
+  //width:100%;
+  height:30%;
+}
+
+#objectives{
+  width: 90%;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <title>RFP Page</title>
+	<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=DBkz9n8E9O3QJvLR5rhag_wgzkqnMYhnntPJ1heu9kRxCdmu833WLvHgBUaj6zvpU8L0AWDiFlyD8pJiAyAn3-zwhnOSaZmrXlt0lnV4EHKY-lnU6posfeLbKfjSb462M6ySyz4eIiHsm7rRJMWmqvjj3WHZq0qIDOHEKGpOhBpqJ1NpUmajKuVXutaTz_kEg27n5oUkNWmqZEwH1xRa82_kg9cgEqKsSWzd5u923JR7NmwjIWFEksIvZEqtdCx3vqEmpkXPm0sbftTGL9xHUe0NwDjTH53rjDDuAELlSx4j4ADXWkl_15e5uTt8KpTe6bP3RpUDm_uVHZ7JjlMr1YJPXgxphW0CEnHtbdUtjyO0_tPjVhaniJVd8959-uvia1bXZ4vTuxUA5T75mG5-h010LaZ0Jw03-PvYL4Qfh4-XPowyZftllBa5XyFPNfuKShDnla289To-crQU_8EVj0wyeBPR0XkLGsRj11X9W8ZRL8Ewuff1bJja8naIO4u0Lsmyg5k6xeKSZKm6hVTGuv6eVNjmHMY5snVWMVAjx9Gozl7GRLIbmzvqTEJ2F9ZsP67v-xTIe9ZsLfk3cu59_SQbThi_KO2lpWxsorrVyZeRRw55sbAVrFERf6m8dO8XHHitAC2nKNWearvQCJwuE7RELXT1vFRWZ_rDd5tyMiCSD8icyHsFWk3-ShC9bp0pUT2Yw2kWRQF15p8nViKp3VGOfpZin7hlSaY9cYzusu9bUudNcjs9x3Ks_y2dU07dhiMjgLF7Sucg7PxQ6sCK3GyIbf9mQZ5HFdlO2kyhR6YHFYzBN8llUhq0m7RDbyYfT1pBYQTFIHmRnxWYOt67lJlTfRm0kkFfD4zl6RxJ761W7WwrR0e2pcQV4NIVsdZlxbEI8IBtY74cacxSLF7Vzq1WpL-wm5Q2kAIunOfWM82qj6TWGHpoO_V8i3e3GbHy9QO2redBiLFMuwXHdiy3XOtB_TttZamZ_oqzhpJQrAWkiyKu1fRs9avl3Q35XoDJmM01-RUe8rWjUL4zj-fXBP3IpnNKPkFS9MvbrLdyA5Bp65E9f6pzfHfCJcE9qLw-YeJHLs4euhkNabBtUxZSvJpz2G-sNCyoe9sVGE0BmrIQBJBRNwHaMDu0NRgA9XLPHgf86QlExcWb-ywlTzuqR5Krzg80vUtAebKl2ZBvxcEpEEh-kt7iSsg1VVsyWsTg-cJFF8oY0NyOGhQ34wyp7Q" nonce="4dbab8ceba88ed04937ad242bb49e827" charset="UTF-8">
+  </script>
+  <style>
+		table tr{
+			margin: 1% 1% 1% 1%;
+			padding: 1% 1% 1% 1%;
+
+		}
+	</style>
+  </head>
+  <body>
+    <!--firebase use-->
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyCBogDDnDNRwhH3AkuINRYLH7hZ0m8VcHg",
+        authDomain: "rfpportal-c447e.firebaseapp.com",
+        projectId: "rfpportal-c447e",
+        databaseURL: "https://rfpportal-c447e-default-rtdb.firebaseio.com",
+        storageBucket: "rfpportal-c447e.appspot.com",
+        messagingSenderId: "281146939127",
+        appId: "1:281146939127:web:4d6139dcdce23dc60c25f2",
+        measurementId: "G-44RQ4SDSWF"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+  <!--nav-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="home.html">#Make a Difference</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="searchpage.html">RFP Search</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <script type="text/javascript">
+      var database = firebase.database();
+      var user = localStorage.getItem('data');
+      user = JSON.parse(user);
+      var file;
+
+      document.getElementById('fileName').addEventListener('change', function(e){
+        file = e.target.files[0];
+      })
+
+      function upload_rfp() {
+        // Create a root reference
+        var storageRef = firebase.storage().ref('Rfps/'+ file.name);
+
+        // Create a reference to 'mountains.jpg'
+        var docRef = storageRef.child('mountains.jpg');
+
+        // While the file names are the same, the references point to different files
+        //mountainsRef.name === mountainImagesRef.name            // true
+        //mountainsRef.fullPath === mountainImagesRef.fullPath    // false
+
+        //uploading the file
+
+        database.ref('Rpfs/' + storageRef.put(file) ).set({
+          name: file.name,
+          creator: user.uid,
+
+        });
+        window.location.replace("login.html");
+      }
+      document.getElementById('districtName').value;
+    </script>
+
+  <div class="container1" id="proposal_upload">
+      <h1>Request For Proposal Page</h1>
+	  <br>
+        <table class="proposal_upload">
+          <tr>
+            <td>District Name:</td>
+            <td><input class="data_inp" type="text" name="districtName" id="districtName"></td>
+          </tr>
+          <tr>
+            <td>Department Name:</td>
+            <td><input class="data_inp" type="text" name="departmentName" id="departmentName"></td>
+          </tr>
+          <tr>
+            <td>Related Subjects:</td>
+            <td><input class="data_inp" type="text" name="relatedSubjects" id="relatedSubjects"></td>
+          </tr>
+          <tr>
+            <td>Upload File:</td>
+            <td><input class="data_inp" type="file" name="fileName" id="fileName"></td>
+          </tr>
+
+        </table>
+        <button type="button" id = "uploadFileBtn" name="button" onclick="upload_rfp()">Submit</button>
+
+    </div>
+
+  </body>
+</html>
